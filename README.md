@@ -1,8 +1,9 @@
 # 🌳 Tree Data Structures Performance Benchmark
 
 [![C++](https://img.shields.io/badge/C++-17-blue.svg?style=flat&logo=c%2B%2B)](https://en.cppreference.com/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Research](https://img.shields.io/badge/paper-LaTeX-orange.svg)](paper.pdf)
+[![Code License](https://img.shields.io/badge/Code%20License-MIT-green.svg)](LICENSE)
+[![Paper License](https://img.shields.io/badge/Paper%20License-CC%20BY%204.0-blue.svg)](LICENSE)
 
 > **A comprehensive empirical analysis comparing Red-Black Trees, Unbalanced BSTs, and C++ STL containers**
 
