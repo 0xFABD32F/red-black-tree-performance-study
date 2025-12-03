@@ -76,7 +76,6 @@ std::map       █████████████████████�
 ## 🏗️ Project Structure
 ```
 📦 Benchmark
-├── 📄 README.md                 # This file
 ├── 📄 paper.pdf                 # Compiled research paper
 │── 🔴 RBT.cpp                   # Custom RBT implementation
 │── 🌲 Benchmark.cpp             # BST + STL benchmarks
