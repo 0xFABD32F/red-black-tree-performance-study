@@ -1,4 +1,4 @@
-# 🌳 Tree Data Structures Performance Benchmark
+#  Tree Data Structures Performance Benchmark
 
 [![C++](https://img.shields.io/badge/C++-17-blue.svg?style=flat&logo=c%2B%2B)](https://en.cppreference.com/)
 [![Research](https://img.shields.io/badge/paper-LaTeX-orange.svg)](paper.pdf)
@@ -7,84 +7,84 @@
 
 > **A comprehensive empirical analysis comparing Red-Black Trees, Unbalanced BSTs, and C++ STL containers**
 
-## 📊 Quick Results (using 10 million words dataset)
+##  Quick Results (using 10 million words dataset)
 
 Our benchmarks reveal surprising performance characteristics across five data structures:
 
 | Data Structure | Insertion | Search | Deletion | Overall Rank |
 |---------------|-----------|--------|----------|--------------|
-| 🥇 **unordered_set** | **26,784 ms** | **276 ms** | **930 ms** | 🏆 **#1** |
-| 🥈 **Red-Black Tree** | 43,289 ms | 312 ms | 1,053 ms | 🥈 **#2** |
-| 🥉 **Unbalanced BST** | 77,955 ms | 717 ms | 1,347 ms | 🥉 **#3** |
+|  **unordered_set** | **26,784 ms** | **276 ms** | **930 ms** |  **#1** |
+|  **Red-Black Tree** | 43,289 ms | 312 ms | 1,053 ms |  **#2** |
+|  **Unbalanced BST** | 77,955 ms | 717 ms | 1,347 ms |  **#3** |
 | **std::set** | 84,759 ms | 2,409 ms | 3,085 ms | #4 |
 | **std::map** | 86,819 ms | 893 ms | 3,139 ms | #5 |
 
 ---
 
-## 🎯 Key Findings
+##  Key Findings
 
-### 💡 Hash Tables Dominate
+###  Hash Tables Dominate
 **`std::unordered_set`** consistently outperformed all tree structures:
-- ✅ **1.62×** faster insertion than Red-Black Tree
-- ✅ **1.13×** faster search than Red-Black Tree
-- ✅ **1.13×** faster deletion than Red-Black Tree
+-  **1.62×** faster insertion than Red-Black Tree
+-  **1.13×** faster search than Red-Black Tree
+-  **1.13×** faster deletion than Red-Black Tree
 
-### ⚖️ Balanced Trees Matter
+###  Balanced Trees Matter
 **Red-Black Tree** vs **Unbalanced BST**:
-- ✅ **1.80×** faster insertion
-- ✅ **2.30×** faster search
-- ✅ **1.28×** faster deletion
+-  **1.80×** faster insertion
+-  **2.30×** faster search
+-  **1.28×** faster deletion
 
-### 🚀 Custom Implementations Win
+###  Custom Implementations Win
 Our custom Red-Black Tree **dramatically** outperformed STL containers:
-- ✅ **7.72×** faster search than `std::set`
-- ✅ **2.93×** faster deletion than `std::set`
-- ✅ Similar underlying structure, massive performance difference
+-  **7.72×** faster search than `std::set`
+-  **2.93×** faster deletion than `std::set`
+-  Similar underlying structure, massive performance difference
 
 ---
 
-## 📈 Visual Performance Comparison
+##  Visual Performance Comparison
 
 ### Insertion Performance
 ```
-unordered_set ████████████████░░░░░░░░░░░░░░░░░░░░  26,784 ms  ⭐ FASTEST
+unordered_set ████████████████░░░░░░░░░░░░░░░░░░░░  26,784 ms   FASTEST
 Red-Black Tree ████████████████████████░░░░░░░░░░░░  43,289 ms
 Unbalanced BST ████████████████████████████████████████  77,955 ms
 std::set       █████████████████████████████████████████████  84,759 ms
-std::map       ██████████████████████████████████████████████  86,819 ms  ⚠️ SLOWEST
+std::map       ██████████████████████████████████████████████  86,819 ms   SLOWEST
 ```
 
 ### Search Performance
 ```
-unordered_set ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  276 ms   ⭐ FASTEST
+unordered_set ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  276 ms    FASTEST
 Red-Black Tree ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  312 ms
 Unbalanced BST ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  717 ms
 std::map       ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░  893 ms
-std::set       ████████████████████████████░░░░░░░░░░  2,409 ms  ⚠️ SLOWEST
+std::set       ████████████████████████████░░░░░░░░░░  2,409 ms   SLOWEST
 ```
 
 ### Deletion Performance
 ```
-unordered_set ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  930 ms   ⭐ FASTEST
+unordered_set ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  930 ms    FASTEST
 Red-Black Tree █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░  1,053 ms
 Unbalanced BST ████████████░░░░░░░░░░░░░░░░░░░░░░░░░  1,347 ms
 std::set       ███████████████████████████░░░░░░░░░░░  3,085 ms
-std::map       ████████████████████████████░░░░░░░░░░  3,139 ms  ⚠️ SLOWEST
+std::map       ████████████████████████████░░░░░░░░░░  3,139 ms   SLOWEST
 ```
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 ```
-📦 Benchmark
-│── 🔴 RBT.cpp                   # Custom RBT implementation
-│── 🌲 Benchmark.cpp             # BST + STL benchmarks
-└── 📝 bigtext.txt              # Test dataset
+ Benchmark
+│──  RBT.cpp                   # Custom RBT implementation
+│──  Benchmark.cpp             # BST + STL benchmarks
+└──  bigtext.txt              # Test dataset
 ```
 
 ---
 
-## 🔬 Methodology
+##  Methodology
 
 ### Test Environment
 - **Compiler:** Modern C++ with optimization enabled
@@ -94,49 +94,49 @@ std::map       █████████████████████�
 
 ### Data Structures Tested
 
-#### 1️⃣ Red-Black Tree (Custom Implementation)
+####  Red-Black Tree (Custom Implementation)
 ```cpp
-✅ Self-balancing BST
-✅ O(log n) guaranteed worst-case
-✅ Color-based balancing
-✅ Rotations on insert/delete
+ Self-balancing BST
+ O(log n) guaranteed worst-case
+ Color-based balancing
+ Rotations on insert/delete
 ```
 
-#### 2️⃣ Unbalanced Binary Search Tree
+####  Unbalanced Binary Search Tree
 ```cpp
-⚠️ No balancing mechanism
-⚠️ O(n) worst-case possible
-✅ Simple implementation
-✅ Good for random data
+ No balancing mechanism
+ O(n) worst-case possible
+ Simple implementation
+ Good for random data
 ```
 
-#### 3️⃣ std::unordered_set (Hash Table)
+####  std::unordered_set (Hash Table)
 ```cpp
-✅ O(1) average case
-✅ Hash-based lookup
-⚠️ No ordering guarantees
-⚠️ O(n) worst-case collisions
+ O(1) average case
+ Hash-based lookup
+ No ordering guarantees
+ O(n) worst-case collisions
 ```
 
-#### 4️⃣ std::set (STL Red-Black Tree)
+####  std::set (STL Red-Black Tree)
 ```cpp
-✅ O(log n) guaranteed
-✅ Ordered iteration
-✅ Standard library reliability
-⚠️ Abstraction overhead
+ O(log n) guaranteed
+ Ordered iteration
+ Standard library reliability
+ Abstraction overhead
 ```
 
-#### 5️⃣ std::map (STL Red-Black Tree)
+####  std::map (STL Red-Black Tree)
 ```cpp
-✅ Key-value pairs
-✅ O(log n) guaranteed
-✅ Ordered iteration
-⚠️ Additional memory overhead
+ Key-value pairs
+ O(log n) guaranteed
+ Ordered iteration
+ Additional memory overhead
 ```
 
 ---
 
-## 🎓 Detailed Analysis
+##  Detailed Analysis
 
 ### Performance Ratios (Normalized to unordered_set)
 
@@ -148,7 +148,7 @@ std::map       █████████████████████�
 | std::set | 3.17× | 8.73× | 3.32× | 5.07× |
 | std::map | 3.24× | 3.24× | 3.37× | 3.28× |
 
-### 🔍 Why Custom RBT Beats std::set?
+###  Why Custom RBT Beats std::set?
 
 Despite both using Red-Black Tree structure, our custom implementation is **7.72× faster** in search operations:
 
@@ -158,7 +158,7 @@ Despite both using Red-Black Tree structure, our custom implementation is **7.72
 4. **Cache-friendly** - Compact memory layout
 5. **No iterator guarantees** - Faster modifications
 
-### ⚠️ Surprising Finding: std::set Search Performance
+###  Surprising Finding: std::set Search Performance
 
 `std::set` showed unexpectedly poor search performance (2,409 ms vs RBT's 312 ms):
 - Additional comparison function overhead
@@ -168,7 +168,7 @@ Despite both using Red-Black Tree structure, our custom implementation is **7.72
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Compile and Run
 ```bash
@@ -190,7 +190,7 @@ g++ -std=c++17 -O2 Benchmark.cpp -o bst_benchmark
 
 ---
 
-## 📚 Implementation Details
+##  Implementation Details
 
 ### Red-Black Tree Features
 ```cpp
@@ -234,38 +234,38 @@ class BST {
 
 ---
 
-## 💭 When to Use What?
+##  When to Use What?
 
-### ✅ Use `std::unordered_set` when:
-- ✔️ You need maximum performance
-- ✔️ Order doesn't matter
-- ✔️ You're okay with hash collisions
-- ✔️ Memory is not extremely constrained
+###  Use `std::unordered_set` when:
+-  You need maximum performance
+-  Order doesn't matter
+-  You're okay with hash collisions
+-  Memory is not extremely constrained
 
-### ✅ Use Custom Red-Black Tree when:
-- ✔️ You need ordered iteration
-- ✔️ Performance is critical
-- ✔️ Guaranteed O(log n) is required
-- ✔️ You can maintain custom code
+###  Use Custom Red-Black Tree when:
+-  You need ordered iteration
+-  Performance is critical
+-  Guaranteed O(log n) is required
+-  You can maintain custom code
 
-### ✅ Use `std::set` when:
-- ✔️ You need standard library reliability
-- ✔️ Development time matters more than performance
-- ✔️ Iterator validity is important
-- ✔️ Ordered iteration is required
+###  Use `std::set` when:
+-  You need standard library reliability
+-  Development time matters more than performance
+-  Iterator validity is important
+-  Ordered iteration is required
 
-### ❌ Never Use Unbalanced BST when:
-- ❌ Data might be sorted or patterned
-- ❌ Performance is critical
-- ❌ Worst-case guarantees matter
+###  Never Use Unbalanced BST when:
+-  Data might be sorted or patterned
+-  Performance is critical
+-  Worst-case guarantees matter
 
 ---
 
-## 📖 Research Paper
+##  Research Paper
 
 A comprehensive research paper with detailed analysis, theoretical validation, and visualizations is available:
 
-📄 **[Read the Full Paper (PDF)](paper.pdf)**
+ **[Read the Full Paper (PDF)](paper.pdf)**
 
 ### Paper Sections:
 1. Introduction and Motivation
@@ -280,7 +280,7 @@ A comprehensive research paper with detailed analysis, theoretical validation, a
 
 ---
 
-## 🎯 Conclusions
+##  Conclusions
 
 ### Key Takeaways
 
@@ -292,17 +292,17 @@ A comprehensive research paper with detailed analysis, theoretical validation, a
 
 ### Performance Summary
 ```
-🏆 CHAMPION: std::unordered_set
+ CHAMPION: std::unordered_set
    - Best all-around performance
    - Consistent across all operations
    - Hash table efficiency validated
 
-🥈 RUNNER-UP: Custom Red-Black Tree
+ RUNNER-UP: Custom Red-Black Tree
    - Excellent balanced performance
    - Guaranteed O(log n) operations
    - Dramatically faster than STL
 
-🥉 THIRD PLACE: Unbalanced BST
+ THIRD PLACE: Unbalanced BST
    - Acceptable for random data
    - Degraded but not catastrophic
    - Educational purposes only
@@ -310,7 +310,7 @@ A comprehensive research paper with detailed analysis, theoretical validation, a
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Areas for improvement:
 
@@ -331,13 +331,13 @@ Contributions are welcome! Areas for improvement:
 
 ---
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - C++ Standards Committee for robust STL implementations
 - Research community for advancing data structure theory
@@ -345,17 +345,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📧 Contact
+##  Contact
 
 For questions or discussions about this research:
 
-- 📧 Email: soukariabdourahmane@gmail.com
-- 💬 Issues: [GitHub Issues](https://github.com/0xFABD32F/Benchmark/issues)
-- 📄 Paper: [Full Research Paper](paper.pdf)
+-  Email: soukariabdourahmane@gmail.com
+-  Issues: [GitHub Issues](https://github.com/0xFABD32F/Benchmark/issues)
+-  Paper: [Full Research Paper](paper.pdf)
 
 ---
 
-## 📊 Citation
+##  Citation
 
 If you use this work in your research, please cite:
 ```bibtex
@@ -370,7 +370,7 @@ If you use this work in your research, please cite:
 
 <div align="center">
 
-### ⭐ Star this repository if you found it helpful!
+###  Star this repository if you found it helpful!
 
 [⬆ Back to Top](#-tree-data-structures-performance-benchmark)
 
